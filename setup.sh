@@ -16,8 +16,8 @@ mise install
 
 # Install Xcode
 command -v aria2c >/dev/null 2>&1 || brew install aria2
-command -v xcodes >/dev/null 2>&1 || brew install xcodes
+command -v xcodes >/dev/null 2>&1 || brew install --formula xcodes
 xcodes install --experimental-unxip && xcodes select
 
 # Install Android Studio
-command -v studio >/dev/null 2>&1 || brew install android-studio
+command -v studio >/dev/null 2>&1 || brew install --cask android-studio
