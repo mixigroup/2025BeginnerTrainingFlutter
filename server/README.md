@@ -6,13 +6,13 @@ mini relayは[strfry](https://github.com/hoytech/strfry)を使用したミニマ
 
 ## ローカルで起動
 
-```bash
+```sh
 docker compose up
 ```
 
 ## 停止
 
-```bash
+```sh
 docker compose down
 ```
 

@@ -14,23 +14,31 @@
 
 ### セットアップ
 
-```zsh
+```sh
+# このリポジトリをクローン
 git clone https://github.com/mixigroup/2025BeginnerTrainingFlutter.git
 cd 2025BeginnerTrainingFlutter
+```
+
+```sh
+# Rosetta2をインストール
+sudo softwareupdate --install-rosetta --agree-to-license
+
+# 各ランタイムをインストール
+mise trust
 mise install
 ```
 
-または、
+または、以下を実行してください  
+上記のツールを全てインストールします ([Homebrew](https://brew.sh/)に依存しています)
 
-```zsh
+```sh
 ./setup.sh
 ```
 
-起動したことがなければ、XcodeとAndroid Studioを起動しておくと良いでしょう
-
 `flutter doctor` を実行して、以下のように表示されればOKです (上記で指定していないツールのバージョンは違っても大丈夫です)
 
-```zsh
+```sh
 ❯ flutter doctor
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.29.3, on macOS 15.4 24E248 darwin-arm64, locale ja-JP)
@@ -44,6 +52,8 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 • No issues found!
 ```
+
+起動したことがなければ、XcodeとAndroid Studioを起動しておくと良いでしょう
 
 ### テキストエディタ
 
