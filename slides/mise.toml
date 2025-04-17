@@ -1,0 +1,14 @@
+[tools]
+"cargo:silicon" = "latest"
+"go:github.com/k1LoW/deck/cmd/deck" = "latest"
+
+[env]
+_.file = ".env"
+
+[tasks."deck:all"]
+run = "deck apply $PRESENTATION_ID slides.md"
+sources = ["slides.md"]
+
+[tasks."deck:page"]
+run = "deck apply $PRESENTATION_ID slides.md --page {{arg(name='page')}}"
+sources = ["slides.md"]

@@ -1,0 +1,9 @@
+[env]
+_.file = ".env"
+IMAGE = "{{env.REGION}}-docker.pkg.dev/{{env.PROJECT_ID}}/{{env.REPOSITORY}}/mini-relay"
+
+[tasks.build]
+run = "gcloud builds submit --region=${REGION} --tag=${IMAGE} ."
+
+[tasks.deploy]
+run = "gcloud run deploy mini-relay --region=${REGION} --image=${IMAGE} --platform=managed --allow-unauthenticated"

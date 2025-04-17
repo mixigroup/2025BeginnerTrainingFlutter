@@ -1,0 +1,13 @@
+services:
+  relay:
+    build:
+      context: .
+    ports:
+      - "7777:8080"
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+    volumes:
+      - ./dump:/dump
+    command: >
+      sh -c "mkdir -p /tmp/db && strfry relay"
