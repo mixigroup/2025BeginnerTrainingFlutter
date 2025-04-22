@@ -55,6 +55,8 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 起動したことがなければ、XcodeとAndroid Studioを起動しておくと良いでしょう
 
+うまく行かない場合や、macOS環境でない場合は、 https://docs.flutter.dev/get-started/install に従ってください
+
 ### テキストエディタ
 
 使用するテキストエディタは何でも良いですが、[Visual Studio Code](https://code.visualstudio.com/)を推奨しています
