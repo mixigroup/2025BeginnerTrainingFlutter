@@ -12,3 +12,14 @@ sources = ["slides.md"]
 [tasks."deck:page"]
 run = "deck apply $PRESENTATION_ID slides.md --page {{arg(name='page')}}"
 sources = ["slides.md"]
+
+[tasks.silicon]
+run = '''
+file={{arg(name='file')}}
+output_file="assets/$(basename "$file").png"
+silicon "$file" -o "$output_file" \
+  --font "UDEV Gothic NFLG" \
+  --theme "Catppuccin Frappe" \
+  --highlight-lines {{arg(name='highlight-lines', default='0')}} \
+  --language {{arg(name='language', default='markdown')}}
+'''
